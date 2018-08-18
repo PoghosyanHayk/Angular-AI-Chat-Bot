@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-// Ai api module
-import { ApiAiClient } from 'api-ai-javascript';
+// Ai api Client
+import { ApiAiClient } from '../client/ApiAiClient';
 
 // RxJs modules
 import { BehaviorSubject } from 'rxjs';
@@ -24,7 +24,8 @@ export class DataService {
 
   conversation = new BehaviorSubject<Message[]>([]);
 
-  constructor() { }
+  constructor() {}
+
 
   public converse(msg: string) {
     const userMessage = new Message(msg, ESendBy.user);

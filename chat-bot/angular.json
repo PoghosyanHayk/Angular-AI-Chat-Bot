@@ -5,23 +5,23 @@
   "projects": {
     "ngx-ai": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "src/demo",
       "projectType": "application",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist",
-            "index": "src/index.html",
-            "main": "src/main.ts",
+            "index": "src/demo/index.html",
+            "main": "src/demo/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/demo/polyfills.ts",
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "src/demo/assets",
+              "src/demo/favicon.ico"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/demo/styles.scss"
             ],
             "scripts": []
           },
@@ -65,17 +65,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "karmaConfig": "src/karma.conf.js",
+            "main": "src/demo/test.ts",
+            "karmaConfig": "src/demo/karma.conf.js",
             "tsConfig": "src/tsconfig.spec.json",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/demo/polyfills.ts",
             "scripts": [],
             "styles": [
-              "src/styles.scss"
+              "src/demo/styles.scss"
             ],
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "src/demo/assets",
+              "src/demo/favicon.ico"
             ]
           }
         },
