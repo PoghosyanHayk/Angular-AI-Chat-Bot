@@ -12,9 +12,9 @@ var ApiAiClient_1 = require("../client/ApiAiClient");
 // RxJs modules
 var rxjs_1 = require("rxjs");
 var Message = /** @class */ (function () {
-    function Message(content, sentBy) {
+    function Message(content, sendBy) {
         this.content = content;
-        this.sentBy = sentBy;
+        this.sendBy = sendBy;
     }
     return Message;
 }());

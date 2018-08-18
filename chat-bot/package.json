@@ -1,6 +1,6 @@
 {
   "name": "angular-ai-chat-bot",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": {
     "name": "Hayk Poghosyan",
     "email": "poghosyanhayk1@gmail.com"
@@ -18,7 +18,9 @@
     "ngx",
     "rxjs",
     "observables",
-    "custom design"
+    "custom design",
+    "google",
+    "api"
   ],
   "repository": "https://github.com/PoghosyanHayk/Angular-AI-Chat-Bot",
   "license": "MIT",

@@ -20,7 +20,7 @@ var ChatMsgComponent = /** @class */ (function () {
     ], ChatMsgComponent.prototype, "msg");
     ChatMsgComponent = __decorate([
         core_1.Component({
-            selector: 'app-chat-msg',
+            selector: 'chat-msg',
             templateUrl: './chat-msg.component.html',
             styleUrls: ['./chat-msg.component.css']
         })

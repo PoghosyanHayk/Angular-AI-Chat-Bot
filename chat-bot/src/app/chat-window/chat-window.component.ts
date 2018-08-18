@@ -4,7 +4,7 @@ import {DataService, Message} from '../services/data.service';
 import {scan} from 'rxjs/internal/operators';
 
 @Component({
-  selector: 'app-chat-window',
+  selector: 'Chat-bot',
   templateUrl: './chat-window.component.html',
   styleUrls: ['./chat-window.component.css']
 })

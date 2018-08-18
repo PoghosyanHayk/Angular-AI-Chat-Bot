@@ -1,6 +1,6 @@
-import {ChatWindowComponent} from './src/app/chat-window/chat-window.component';
-import {DataService} from "./src/app/services/data.service";
-import  {ChatInputComponent} from "./src/app/chat-input/chat-input.component";
-import {ChatMsgComponent} from "./src/app/chat-msg/chat-msg.component";
+import {ChatWindowComponent as ChatBot} from './src/app/chat-window/chat-window.component';
+import {DataService as ChatService} from "./src/app/services/data.service";
+import  {ChatInputComponent as ChatInput} from "./src/app/chat-input/chat-input.component";
+import {ChatMsgComponent as ChatMsg} from "./src/app/chat-msg/chat-msg.component";
 
-export {DataService, ChatWindowComponent, ChatMsgComponent, ChatInputComponent };
+export {ChatService, ChatBot, ChatMsg, ChatInput };

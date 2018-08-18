@@ -1,16 +1,16 @@
-<app-chat-window class="chat-window"
+<Chat-bot class="chat-window"
                  [token]="'0146bb6bc73f4ef4bbf44e82aa6af957'"
                  [msg]="msg"
                  [msgTemplate]='message'
                  [inputTemplate]='input'>
   <ng-template #window>
   </ng-template>
-</app-chat-window>
+</Chat-bot>
 
 
-<ng-template #message let-text="text" let-object="object" let-sendBy="sentBy">
-  <app-chat-msg [msg]="{text: text,sendBy: sendBy}" ></app-chat-msg>
+<ng-template #message let-text="text" let-object="object" let-sendBy="sendBy">
+  <chat-msg [msg]="{text: text,sendBy: sendBy}" ></chat-msg>
 </ng-template>
 <ng-template #input>
-  <app-chat-input (change)="onChange($event.target);"></app-chat-input>
+  <chat-input (change)="onChange($event.target);"></chat-input>
 </ng-template>

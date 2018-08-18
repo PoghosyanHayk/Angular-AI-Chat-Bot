@@ -46,7 +46,7 @@ var ChatWindowComponent = /** @class */ (function () {
     ], ChatWindowComponent.prototype, "msgArea");
     ChatWindowComponent = __decorate([
         core_1.Component({
-            selector: 'app-chat-window',
+            selector: 'Chat-bot',
             templateUrl: './chat-window.component.html',
             styleUrls: ['./chat-window.component.css']
         })

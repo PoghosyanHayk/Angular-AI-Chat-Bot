@@ -7,7 +7,7 @@ import { ApiAiClient } from '../client/ApiAiClient';
 import { BehaviorSubject } from 'rxjs';
 
 export class Message {
-  constructor(public content: string, public sentBy: ESendBy) {}
+  constructor(public content: string, public sendBy: ESendBy) {}
 }
 
 export enum ESendBy {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-chat-input',
+  selector: 'chat-input',
   templateUrl: './chat-input.component.html',
   styleUrls: ['./chat-input.component.css']
 })

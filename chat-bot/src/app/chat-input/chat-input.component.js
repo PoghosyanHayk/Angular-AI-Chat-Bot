@@ -14,7 +14,7 @@ var ChatInputComponent = /** @class */ (function () {
     };
     ChatInputComponent = __decorate([
         core_1.Component({
-            selector: 'app-chat-input',
+            selector: 'chat-input',
             templateUrl: './chat-input.component.html',
             styleUrls: ['./chat-input.component.css']
         })
