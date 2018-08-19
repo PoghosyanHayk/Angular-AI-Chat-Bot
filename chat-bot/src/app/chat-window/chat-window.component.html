@@ -2,7 +2,7 @@
   <ng-container  [ngTemplateOutlet]="template">
     <div class="msgArea" #msgArea>
       <ng-container *ngFor="let msg of allMessages | async; let i = index;"
-        [ngTemplateOutlet]="msgTemplate"
+        [ngTemplateOutlet]="defaultMsgTemplate"
         [ngTemplateOutletContext]="{
                                        text: msg.content ,
                                        sendBy: msg.sendBy
@@ -16,3 +16,11 @@
     </div>
   </ng-container>
 </mat-card>
+
+<ng-template  #defaultMsgTemplate let-text="text" let-object="object" let-sendBy="sendBy">
+  <chat-msg [msg]="{text: text,sendBy: sendBy}" ></chat-msg>
+</ng-template>
+
+<ng-template #defaultInputTemplate>
+  <chat-input (change)="onChange($event.target);"></chat-input>
+</ng-template>

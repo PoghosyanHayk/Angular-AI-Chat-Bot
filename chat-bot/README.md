@@ -1,11 +1,8 @@
 # Angular AI Chat Bot
 
-<div>
-<span><img src="https://image.ibb.co/bRzqVz/ezgif_com_video_to_gif_1.gif" height="400" />
-</span>
-<span><img src="https://preview.ibb.co/bv6OiK/dialog_chat3.png" alt="dialog_chat3" height="400" border="0">
-</span>
-</div>
+<img src="https://image.ibb.co/bRzqVz/ezgif_com_video_to_gif_1.gif" height="400" width="40%"  /><img  src="https://preview.ibb.co/fSHcvz/a.png" alt="dialog_chat3" height="400" border="0" width="60%">
+
+
 
 ## :clapper: Usage
 
@@ -13,7 +10,7 @@ Ok, let's start with an installation - all you need to do is:
 
 `npm install --save angular-ai-chat-bot`
 
-Now when you have `angular-ai-chat-bot` installed, you are in a few steps from having tree in your application:
+Now when you have `angular-ai-chat-bot` installed, you are in a few steps from having Chat Bot in your application:
 
 1. Add the `ChatBot` to your application's module `declarations` section:
 
@@ -31,7 +28,7 @@ import {ChatBot} from 'angular-ai-chat-bot';
 export class MyModule {}
 ```
 
-2. As soon as the previous step is done we need to give ChatBot an access token and message object - this can be accomplished by populating its `[token]` attribute with an 'Client access token' from Dialog Flow Agent and `[msg]` attribute with an RX Subject:
+2\. As soon as the previous step is done we need to give ChatBot an access token and message object - this can be accomplished by populating its `[token]` attribute with an 'Client access token' from Dialog Flow Agent and `[msg]` attribute with an RX Subject:
 
 ```typescript
 // 1 - import required classes and interfaces
@@ -55,6 +52,23 @@ class MyComponent {
   public message: Subject<any> = new Subject();
 }
 ```
+3\. You need to add module into typescript compilation configs
+
+tsconfig.app.json
+
+```typescript
+{
+	...
+  "include": [
+  	...
+  "../node_modules/angular-ai-chat-bot/*.ts",
+   "../node_modules/angular-ai-chat-bot/**/*.ts"
+  ],
+	...
+}
+
+```
+
 
 Voila! That's pretty much it - enjoy :blush:
 
@@ -71,7 +85,8 @@ Here is the fully stuffed _Chat-Bot_ tag that you can use in your templates:
                      [token]="accessToken"
                      [msg]="msg"
                      [msgTemplate]='message'
-                     [inputTemplate]='input'>
+                     [inputTemplate]='input'
+					 (onMsgReceive)="onMsgReceive($event)">
       <ng-template #window>
       </ng-template>
     </Chat-bot>
@@ -83,11 +98,11 @@ Let's go through every element of this structure one by one.
 
 `Chat-bot` is the selector for `Chat bot` which is bundled into `ChatBot`:
 
-### [token]
+### [token]  :required
 
 `Chat-bot` has a `[token]` attribute which needs to connect to Google API:
 
-### [msg]
+### [msg] :required
 
 `Chat-bot` has a `[msg]` attribute which should be RX Subject object
 
@@ -253,6 +268,22 @@ import { ChatInput } from 'angular-ai-chat-bot';
 })
 export class MyModule {}
 ```
+## Events
+
+### (onMsgReceive)
+
+You can subscribe to the message receive event by attaching listener to the (onMsgReceive) attribute.
+
+```html
+    <Chat-bot class="chat-window"
+                  (onMsgReceive)="onMsgReceive($event)">
+      <ng-template #window>
+      </ng-template>
+    </Chat-bot>
+
+```
+`onMsgReceive` has just one property: recived message context
+
 
 
 ## :bulb: Want to help?

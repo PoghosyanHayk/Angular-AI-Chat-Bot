@@ -18,4 +18,6 @@ export class AppComponent {
     this.msg.next(target.value);
     target.value = '';
   }
+
+  public onMsgReceive(msg: string) { }
 }

@@ -2,7 +2,8 @@
                  [token]="'0146bb6bc73f4ef4bbf44e82aa6af957'"
                  [msg]="msg"
                  [msgTemplate]='message'
-                 [inputTemplate]='input'>
+                 [inputTemplate]='input'
+                 (onMsgReceive)="onMsgReceive($event)">
   <ng-template #window>
   </ng-template>
 </Chat-bot>
