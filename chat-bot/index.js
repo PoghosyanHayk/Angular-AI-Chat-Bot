@@ -1,4 +1,4 @@
-use strict";
+"use strict";
 exports.__esModule = true;
 var chat_window_component_1 = require("./src/app/chat-window/chat-window.component");
 exports.ChatBot = chat_window_component_1.ChatWindowComponent;

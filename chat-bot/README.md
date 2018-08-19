@@ -1,5 +1,8 @@
 # Angular AI Chat Bot
 
+<img src="https://image.ibb.co/bRzqVz/ezgif_com_video_to_gif_1.gif" height="400" />
+
+<img src="https://preview.ibb.co/bv6OiK/dialog_chat3.png" alt="dialog_chat3" height="400" border="0">
 
 ## :clapper: Usage
 
@@ -36,13 +39,13 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'myComp',
   // 2 - set [token] attribute to ChatBot object
-  template: `<app-chat-window class="chat-window"
+  template: `<Chat-bot class="chat-window"
                               [token]="accessToken"
                               [msg]="message"
                               >
                <ng-template>
                </ng-template>
-             </app-chat-window>`
+             </Chat-bot>`
 })
 class MyComponent {
   public accessToken = 'YOUR_ACCESS_TOKEN';
@@ -215,7 +218,7 @@ Or you can import `chat-input` component from `angular-ai-chat-bot` module and u
     
     
 <ng-template #input>
-  <chat-input (change)="onChange($event.target);"></chat-input>
+  <chat-input (change)="onChange($event.target.value);"></chat-input>
 </ng-template>
 ```
 
