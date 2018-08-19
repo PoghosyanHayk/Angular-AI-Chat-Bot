@@ -1,8 +1,11 @@
 # Angular AI Chat Bot
 
+<div>
 <img src="https://image.ibb.co/bRzqVz/ezgif_com_video_to_gif_1.gif" height="400" />
 
 <img src="https://preview.ibb.co/bv6OiK/dialog_chat3.png" alt="dialog_chat3" height="400" border="0">
+
+</div>
 
 ## :clapper: Usage
 
