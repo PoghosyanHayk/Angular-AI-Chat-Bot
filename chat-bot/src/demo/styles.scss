@@ -1,0 +1,13 @@
+@import "../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+.input-area > * {
+  width: 100%;
+}
+
+
+::-webkit-scrollbar
+{
+  width: 0px;  /* for vertical scrollbars */
+  height: 0px; /* for horizontal scrollbars */
+}
+

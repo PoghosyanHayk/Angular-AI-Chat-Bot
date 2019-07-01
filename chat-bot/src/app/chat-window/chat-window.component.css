@@ -1,0 +1,19 @@
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #d219192e;
+  padding: 5px;
+}
+
+.msgArea {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}
+.input-area {
+  display: flex;
+  width: 100%;
+}

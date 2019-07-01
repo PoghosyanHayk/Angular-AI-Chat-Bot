@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "es2015",
+    "types": [],
+    "forceConsistentCasingInFileNames": false
+  },
+  "include": [
+    "./demo/main.ts",
+    "./demo/polyfills.ts"
+  ],
+  "exclude": [
+    "./demo/test.ts"
+  ]
+}

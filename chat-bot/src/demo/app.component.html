@@ -1,0 +1,17 @@
+<Chat-bot class="chat-window"
+                 [token]="'0146bb6bc73f4ef4bbf44e82aa6af957'"
+                 [msg]="msg"
+                 [msgTemplate]='message'
+                 [inputTemplate]='input'
+                 (onMsgReceive)="onMsgReceive($event)">
+  <ng-template #window>
+  </ng-template>
+</Chat-bot>
+
+
+<ng-template #message let-text="text" let-object="object" let-sendBy="sendBy">
+  <chat-msg [msg]="{text: text,sendBy: sendBy}" ></chat-msg>
+</ng-template>
+<ng-template #input>
+  <chat-input (change)="onChange($event.target);"></chat-input>
+</ng-template>
